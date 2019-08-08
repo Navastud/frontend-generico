@@ -2,7 +2,7 @@ import React from "react";
 import { Menu, Icon } from "antd";
 import { Link } from "react-router-dom";
 
-const items = [
+const routes = [
   {
     key: "1",
     icon: "home",
@@ -26,11 +26,11 @@ const items = [
 const MenuSider = () => {
   return (
     <Menu theme="dark" mode="inline" defaultSelectedKeys={["1"]}>
-      {items.map(({ key, icon, name, path }) => (
-        <Menu.Item key={key}>
-          <Link to={path}>
-            <Icon type={icon} />
-            <span>{name}</span>
+      {routes.map(route => (
+        <Menu.Item key={route.key}>
+          <Link to={route.path}>
+            <Icon type={route.icon} />
+            <span>{route.name}</span>
           </Link>
         </Menu.Item>
       ))}

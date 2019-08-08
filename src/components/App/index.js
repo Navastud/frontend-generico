@@ -2,6 +2,7 @@ import React from "react";
 import { Layout } from "antd";
 import styles from "./style";
 import MenuSider from "./MenuSider";
+import ContentRoute from "./ContentRoute";
 const { Header, Content, Footer, Sider } = Layout;
 
 export default function App() {
@@ -16,7 +17,9 @@ export default function App() {
           <h1>Header</h1>
         </Header>
         <Content style={styles.content}>
-          <div style={styles.contentDiv}>Content</div>
+          <div style={styles.contentDiv}>
+            <ContentRoute />
+          </div>
         </Content>
         <Footer style={styles.footer}>
           Ant Design ©2018 Created by Navastud
